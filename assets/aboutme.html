@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>About Me</title>
+	<link type = "text/css" rel = "stylesheet" href = "/assets/style.css" />
+	<link rel="stylesheet" href="/assets/css/bootstrap.css">
+</head>
+
+<body>
+	<ul>
+		<li><h1 class = "MyName">Mathew Horner</h1></li>
+		<li><a href = "/home">Home</a></li>
+		<li><a href = "/about">About Me</a></li>
+		<li><a href = "/contact">Contact</a></li>
+		<li><a href = "/guestbook">Guestbook</a></li>
+	</ul>
+	
+	<br/>
+	<h1 class = "MyTitle">My Background</h4>
+	<p class = "MyText">I'm from Fremont, NE and I went to high school in a little town called Cedar Bluffs. I am a Computer Science major. On campus I'm involved in a few different 
+	clubs and am a member of <b id="PhiSig">Phi Sigma Kappa</b>. I have no previous CS related work experience, I've only ever detassled and worked as a stocker at my local grocery 
+	store.</p>
+	
+	<h1 class = "MyTitle">My Plans</h4>
+	<p class = "MyText">My future plans are to do entry level programming work for the first few years of my career, then once I have some experience either try to move on to
+	becoming a Software Engineer or starting my own business</p>
+	
+	<h1 class = "MyTitle">My Interests</h4>
+	<p class = "MyText">Like most other CS majors, maybe stereotyping a bit, I like to play video games. I enjoy playing intramural sports like basketball. I'm also learning how to
+	play guitar, so that has been taking up some of my free time lately. I also enjoy reading when I get the chance.</p>
+	
+	<br/><br/>
+	<center>
+	<p class = "MyText">Try my riddle game!</p>
+	<br/>
+	<!-- Gotta work out the JS. -->
+	<span id = "rText"></span>
+	<br/>
+	<textarea cols = "40" rows = "5" id = "answerfield"></textarea><br/>
+	<button class = "btn" onclick = "app.check()">Submit</button><br/>
+	<span id = "yn"></span>
+	</center>
+	
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script src="/assets/riddles.js"></script>
+</body>

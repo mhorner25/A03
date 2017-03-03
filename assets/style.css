@@ -1,0 +1,48 @@
+.MyName {
+	font-size: large;
+	color: #0099ff;
+}
+
+.MyTitle {
+	font-size: large;
+	color: #0099ff;
+}
+
+.MyText {
+	font-size: 16px;
+	color: #000000
+}
+
+#PhiSig {
+	color: #dd0000
+}
+
+body {
+	background: #FFF;
+	background-image: url("img/background.jpg");
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #444;
+}
+
+li {
+    float: left;
+	padding: 0px 16px;
+}
+
+li a {
+    display: block;
+    color: #FFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}

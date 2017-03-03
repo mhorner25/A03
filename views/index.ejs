@@ -1,0 +1,26 @@
+<% include header %>
+<a href="/new-entry" class="btn btn-primary">New entry</a>
+<br/><br/>
+
+<% if (entries.length) { %>
+<% entries.forEach(function(entry) { %>
+
+<% console.log("Displaying:" + entry.title) %>
+<% console.log("Displaying:" + entry.content) %>
+<% console.log("Displaying:" + entry.published) %>
+
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="text-muted pull-right">
+<%= entry.published %></div>
+<%= entry.title %></div>
+<div class="panel-body">
+<%= entry.content %>
+</div>
+</div>
+<% }) %>
+<% } else { %>
+<a href="/new-entry">Sign my guestbook!</a>
+</div>
+<% } %>
+<% include footer %>
