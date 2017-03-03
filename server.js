@@ -6,20 +6,16 @@ var bodyParser = require("body-parser");
 var app = express();
 var http = require('http').Server(app);
 
-// Set up view engine.
 app.set("views", path.resolve(__dirname, "views"));
 app.set("view engine", "ejs");
 app.use('/assets', express.static('assets'));
 
-// Entries array.
 var entries = [];
 app.locals.entries = entries;
 
-// Logger
 app.use(logger("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// Handle GET requests.
 app.get("/guestbook", function (request, response) {
   response.render("index");
 });
@@ -38,7 +34,7 @@ app.get("/contact", function (request, response) {
 
 app.post("/new-entry", function (request, response) {
   if (!request.body.title || !request.body.body) {
-    response.status(400).send("Entries must have a title and a body.");
+    response.status(400).send("Incomplete entry.");
     return;
   }
   entries.push({  // store it
@@ -54,7 +50,7 @@ app.use(function (request, response) {
   response.status(404).render("404");
 });
 
-// Listen for an application request on port 8081
+// Listen on port 8081
 http.listen(8081, function () {
   console.log('Listening on http://127.0.0.1:8081/');
 });
